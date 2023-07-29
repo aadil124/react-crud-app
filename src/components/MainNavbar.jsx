@@ -10,7 +10,7 @@ const MainNavbar = () => {
       <NavbarBrand className="fw-bold p-2" to="/">
         <Link to="/" className="text-decoration-none">
           <BsDiscord className="mx-2" />
-          User
+          Users
         </Link>
       </NavbarBrand>
     </Navbar>

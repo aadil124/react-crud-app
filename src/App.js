@@ -15,7 +15,7 @@ const App = () => {
         <Route path="/" Component={Dashboard} />
         <Route path="/create" Component={CreateUser} />
         <Route path="/profile" Component={UserProfile} />
-        <Route path="/edit" Component={EditUser} />
+        <Route path="/edit/:id" Component={EditUser} />
         <Route path="*" Component={UserNotFound} />
       </Routes>
     </BrowserRouter>

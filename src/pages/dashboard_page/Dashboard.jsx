@@ -1,17 +1,12 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { HiEye, HiPencil, HiTrash, HiUserCircle } from "react-icons/hi2";
-import { BsEye } from "react-icons/bs";
-import { GrEdit } from "react-icons/gr";
-import { RiDeleteBin6Line } from "react-icons/ri";
 import {
   Button,
   ButtonGroup,
   ButtonToolbar,
   ListGroup,
   ListGroupItem,
-  ListGroupItemHeading,
-  ListGroupItemText,
   Spinner,
 } from "reactstrap";
 import { Link } from "react-router-dom";
@@ -24,6 +19,7 @@ const Dashboard = () => {
   const getUserData = async () => {
     const url =
       "https://dev-73841661c741363.api.raw-labs.com/your/endpoint/path";
+    // const url = "https://6456721c5f9a4f2361445c32.mockapi.io/users";
     try {
       await axios.get(url).then(({ data }) => {
         console.log(data);
@@ -43,6 +39,7 @@ const Dashboard = () => {
 
   const deleteUser = async (userId) => {
     const url = `https://dev-73841661c741363.api.raw-labs.com/your/endpoint/path/${userId}`;
+    // const url = `https://6456721c5f9a4f2361445c32.mockapi.io/users/${userId}`;
     setDeleteLoading(true);
     setId(userId);
     try {
@@ -99,7 +96,9 @@ const Dashboard = () => {
                     </Button>
                     <Button color="link">
                       {id === user.id && deleteLoading ? (
-                        <Spinner color="danger">Loading...</Spinner>
+                        <Spinner color="danger" size="sm">
+                          Loading...
+                        </Spinner>
                       ) : (
                         <HiTrash
                           color="red"

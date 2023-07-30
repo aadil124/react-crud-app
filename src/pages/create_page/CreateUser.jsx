@@ -77,7 +77,7 @@ const CreateUser = () => {
         />
       </FormGroup>
       {createLoading ? (
-        <Button color="primary" disabled>
+        <Button color="danger" disabled>
           <Spinner size="sm">Loading...</Spinner>
           <span> Creating...</span>
         </Button>

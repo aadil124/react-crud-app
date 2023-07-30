@@ -17,9 +17,8 @@ const Dashboard = () => {
   const [loading, setLoading] = useState(true);
   const [deleteLoading, setDeleteLoading] = useState(false);
   const getUserData = async () => {
-    const url =
-      "https://dev-73841661c741363.api.raw-labs.com/your/endpoint/path";
-    // const url = "https://6456721c5f9a4f2361445c32.mockapi.io/users";
+    // const url = `https://dev-73841661c741363.api.raw-labs.com/your/endpoint/path`;
+    const url = "https://6456721c5f9a4f2361445c32.mockapi.io/users";
     try {
       await axios.get(url).then(({ data }) => {
         console.log(data);
@@ -38,8 +37,8 @@ const Dashboard = () => {
   //functionality for delete user
 
   const deleteUser = async (userId) => {
-    const url = `https://dev-73841661c741363.api.raw-labs.com/your/endpoint/path/${userId}`;
-    // const url = `https://6456721c5f9a4f2361445c32.mockapi.io/users/${userId}`;
+    // const url = `https://dev-73841661c741363.api.raw-labs.com/your/endpoint/path/${userId}`;
+    const url = `https://6456721c5f9a4f2361445c32.mockapi.io/users/${userId}`;
     setDeleteLoading(true);
     setId(userId);
     try {

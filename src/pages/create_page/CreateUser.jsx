@@ -18,7 +18,8 @@ const CreateUser = () => {
   };
 
   const createHandle = async () => {
-    const url = `https://dev-73841661c741363.api.raw-labs.com/your/endpoint/path`;
+    // const url = `https://dev-73841661c741363.api.raw-labs.com/your/endpoint/path`;
+    const url = "https://6456721c5f9a4f2361445c32.mockapi.io/users";
     setCreateLoading(true);
     try {
       await axios.post(url, createUser);
